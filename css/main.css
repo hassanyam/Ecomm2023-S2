@@ -5,12 +5,25 @@
   --sec-bg-color: #e5e5e5;
   --main-font-color: #000000;
   --font-sec-color: #b4a186;
+  --font-third-color: #707070;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: 0px 12px;
+  transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+a:hover {
+  box-shadow: inset 0 100px 0 0 var(--font-sec-color);
+  color: white;
 }
 
 .container {
@@ -119,7 +132,7 @@ nav .nav-menu ul {
 .slider-btn-nav {
   width: 14px;
   height: 14px;
-  background-color: var(--font-sec-color);
+  background-color: var(--main-bg-color);
   border-radius: 50px;
 }
 
@@ -138,7 +151,6 @@ nav .nav-menu ul {
 .product {
   width: 30%;
   height: 480px;
-
   margin-bottom: 20px;
 }
 
@@ -159,9 +171,18 @@ nav .nav-menu ul {
   font-weight: 500;
 }
 
+.horizontal-splitter {
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--sec-bg-color);
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+
 footer {
   width: 100%;
-  height: 260px;
+  height: 200px;
+  color: var(--font-third-color);
 }
 
 .footer-top {
@@ -172,13 +193,65 @@ footer {
 }
 
 .footer-top-nav {
-  width: 35%;
+  width: 42%;
   height: 100%;
-  border: #b4a186 1px dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-top-nav ul {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.copyright span {
+  color: var(--main-font-color);
 }
 
 .footer-top-email {
   width: 28%;
   height: 100%;
-  border: #211606 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.footer-top-email form {
+  width: 100%;
+  position: relative;
+}
+
+.footer-top-email form input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px var(--font-third-color) solid;
+  padding-left: 2px;
+  outline: none;
+}
+
+.footer-top-email form input[type="text"]::placeholder {
+  text-transform: capitalize;
+}
+
+.footer-top-email form button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.social-media img {
+  margin: 0 12px;
 }
