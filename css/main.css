@@ -129,7 +129,6 @@ nav .nav-menu ul {
 }
 
 .latest-products {
-  height: 300px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -158,4 +157,28 @@ nav .nav-menu ul {
 .product .description {
   text-transform: capitalize;
   font-weight: 500;
+}
+
+footer {
+  width: 100%;
+  height: 260px;
+}
+
+.footer-top {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-top-nav {
+  width: 35%;
+  height: 100%;
+  border: #b4a186 1px dashed;
+}
+
+.footer-top-email {
+  width: 28%;
+  height: 100%;
+  border: #211606 1px solid;
 }
